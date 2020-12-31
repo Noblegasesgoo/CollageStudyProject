@@ -1,0 +1,83 @@
+
+
+	void startWorking(LinkedQueue client_queue, Window *window, int window_length)
+	{
+		int i；
+		int j;
+		int index;
+		
+	    If(判断队链是否为空)
+	    {
+	        退出函数。
+	    }else
+	        {
+	            While(队首不等于等于队尾)
+	            {
+	            	if(!window[0].getWindowsEmpty() && !window[1].getWindowsEmpty() 
+	            		&& !window[2].getWindowsEmpty() &&! window[3].getWindowsEmpty())
+	            	{
+	            	
+	            	} else
+	            		{
+	            			执行出队操作
+	               			Client temp_cilent = client_queue.deleteQueue();
+	               			出队操作完成之后安排到先遍历四个窗口是否为空
+	                		将该客户对接到该窗口
+	
+	               			for (i=0; i<window_length; i++)
+	               			 {
+	               			 	int work_window_number = 0;
+	               			 	
+	                  		 	 If (window[i].getWindowsEmpty() == true)找到空的窗口
+	                  			  	{
+	                    				window[i].setWindowsEmpty(false);
+	                    	
+	                    		   		Switch (当前客户的业务类型)
+	                     			   {
+	                     		    	   Case 业务类型1:...
+	                               				分别执行用该业务的时间（通过Windowd数组中
+	                               		 		当前对接客户的窗口对象调用）+上该窗口开始办理业务间            		
+	                               				break;
+	
+	                          			  	Case 业务类型2:...
+	                          			  	
+	                          			 	Case 业务类型3:...
+	                          			 	
+	                           		 		Case 业务类型4:...
+	
+	                       					Default:...
+	                       			 	}
+									}
+								
+	                            int min = window[j-1].getbusinessEndTime;
+								for (j = 1；j<window_length;j++)
+	                            {
+	                            	if (min >  window[j].getbusinessEndTime)
+	                            	{
+	                            		min = window[j].getbusinessEndTime;
+	                            		index = j;//记录结束时间最小的
+	                            	}
+	                            }
+	                            
+	                            window[index].setWindowsEmpty(true);//时间最小的出队
+	                   		 } 
+	                   		                   		    
+	                }
+	          }
+	          
+
+
+​	                
+​	                
+​	            }
+​	
+	}
+
+
+​	
+​	
+​	
+​	
+​	
+​	
+​	
